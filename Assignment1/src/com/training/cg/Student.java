@@ -1,39 +1,43 @@
 //Question3
 package com.training.cg;
 
-public class Stud{
+ public class Student{
 	String name;
 	String id;
 	String branch;
 
-	public  Stud(String name,String id,String branch) 
+	public  Student(String name,String id,String branch) //parametrized Constructor
 	{
 		this.name= name;
 		this.id= id;
 		this.branch=branch;
 	}
+	
 	public boolean isEqual(Object obj) {
 		if(this == obj) {
 			return true;
 		}
-		if(obj instanceof Stud) {
-			Student s = (s)obj;
-			return ( (s.name.equals(this.name)) && (s.id.equals(this.id)) && (s.branch.equals(this.branch)));
+		if(obj instanceof Student) {
+			Student stud = (Student) obj;
+			return ( (stud.name.equals(this.name)) && (stud.id.equals(this.id)) && (stud.branch.equals(this.branch)) );
 		}
 		return false;
 	}
-	
-}
-public class Student {
+
+
 	public static void main(String[] args)
 	{
-		Stud S1 = new Stud("Ram", "CG101", "IT");
-		Stud S2 = new Stud("lakshman","CG102","IT");
+		Student S1 = new Student("Ram", "CG101", "IT");
+		Student S2 = new Student("lakshman","CG102","IT");
 		
 		System.out.println(S1.isEqual(S2));
+	}	
+	
 	}
 
-}
+
+	
+
 
 /**
  * Q.3 Create a class Student with following operations 1) create parameterized
