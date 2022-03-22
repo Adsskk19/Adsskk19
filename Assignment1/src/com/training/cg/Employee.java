@@ -2,37 +2,46 @@
 package com.training.cg;
 class EmpDetails
 {
-	double PfPer,Pfamt;
-	int Salary;
+	double PfPer;
+	static double Pfamt;
+	static int Salary;
+	static int Allowances;
 	String name;
 	String id;
 	
-	public EmpDetails()
+	public EmpDetails()//Default
 	{
 		name="kiran";
 		id="CG101";
 	}	
-	public EmpDetails(double PfPer,int Salary)
+	public EmpDetails(double PfPer,int Sal)
 	{
 		this.PfPer = PfPer;
-		this.Salary = Salary;
-	}
-	static void Pfamt() 
-	{
-		pfamt = ((PfPer*Salary)/100);
-		System.out.println(pfamt);
+		Salary = Sal;
+		Pfamt = ((PfPer*Salary)/100);
+		System.out.println("PFAMOUNT "+Pfamt);
+		
 	}
 	
+	public EmpDetails(int Sal)
+	{
+		
+		 Allowances = ((40*Sal)/100);
+		 System.out.println("Allowance Amount"+Allowances);
+	}
 	
 }
 
 public class Employee {
 	public static void main(String[] args) {
 		EmpDetails emp = new EmpDetails();
-		
+		EmpDetails pf = new EmpDetails(12.0,30000);
+		EmpDetails Al = new EmpDetails(30000);
 		System.out.println(emp.name);
 		System.out.println(emp.id);
-		System.out.println(emp.Pfamt);
+		System.out.println("PF Percentage "+pf.PfPer);
+		System.out.println("ALLOWANCES "+Al.Allowances);
+		//System.out.println(Pfamt());
 	}
 
 }
