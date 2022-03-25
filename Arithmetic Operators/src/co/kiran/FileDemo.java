@@ -40,7 +40,7 @@ public static void main(String[] args) throws IOException {
 //Thread lifecycle -- different thread stages (New->Runnable->Running->wait->dead)
 //Deadlock
 //synchronization
-//File handling in JAVA (cration of file,read a file,write into a file,delete a file)
+//File handling in JAVA (creation of file,read a file,write into a file,delete a file)
 // 
 
 
